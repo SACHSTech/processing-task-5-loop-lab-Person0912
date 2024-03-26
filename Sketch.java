@@ -145,8 +145,27 @@ public class Sketch extends PApplet {
    * Use the modulus operator and just one 'if' statement to select the color.
    */
   public void draw_section4(){
+    int intX = 0;
+    int intY = 0;
 
+    for(int intRow = 0; intRow < 300; intRow += 10){
+      for(int intColumn = 0; intColumn < 300; intColumn += 10){
+        intX = 903 + intRow;
+        intY = 303 + intColumn;
+
+        if(intRow % 20 == 0 && (intColumn+10) % 20 == 0){
+          fill(255);
+        }
+        else{
+          fill(0);
+        }
+
+        noStroke();
+        rect(intX, intY, 5, 5);
+
+    }
   }
+}
 
   /**
    * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
