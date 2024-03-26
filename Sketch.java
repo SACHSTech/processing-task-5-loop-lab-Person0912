@@ -2,36 +2,18 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 	
-	
-  /**
-   * Called once at the beginning of execution, put your size all in this method
-   */
   public void settings() {
-	// put your size call here
+    // Window size
     size(1200, 600);
   }
 
-  /** 
-   * Called once at the beginning of execution.  Add initial set up
-   * values here i.e background, stroke, fill etc.
-   */
   public void setup() {
-    background(45, 150, 207);
+    // Background colour
+    background(124, 162, 191);
   }
 
-  /**
-   * Called repeatedly, anything drawn to the screen goes here
-   */
   public void draw() {
-	  
-	// sample code, delete this stuff
-    /*
-    stroke(128);
-    line(150, 25, 270, 350);  
-
-    stroke(255);
-    line(50, 125, 70, 50);  
-*/
+    // Sections
     draw_section_outlines();
     draw_section1();
     draw_section2();
@@ -43,33 +25,27 @@ public class Sketch extends PApplet {
     draw_section7();
     draw_section8();
 
-    
   }
 
-
-  /**
-   * Draw the outlines for all sections
-   */
   public void draw_section_outlines(){
+    // Section outlines
     stroke(0);
     noFill();
 
-    // draw bottom row boxes
+    // Bottom row boxes
     rect(0,300, 300, 300);
     rect(300, 300, 300, 300);
     rect(600, 300, 300, 300);
     rect(900, 300, 300, 300);
 
-    // draw top row boxes
+    // Top row boxes
     rect(0,0, 300, 300);
     rect(300, 0, 300, 300);
     rect(600, 0, 300, 300);
     rect(900, 0, 300, 300);
   }
   
-  /**
-   * draws the bottom left section
-   */
+  // Section 1
   public void draw_section1(){
     int intX = 0;
     int intY = 0;
@@ -82,15 +58,11 @@ public class Sketch extends PApplet {
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
-
       }
     }
   }
 
-  /**
-   * Use the modulus operator and an if statement to select the color
-   * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
-   */
+  // Section 2
   public void draw_section2(){
     int intX = 0;
     int intY = 0;
@@ -100,7 +72,7 @@ public class Sketch extends PApplet {
         intX = 303 + intRow;
         intY = 303 + intColumn;
 
-        if(intRow % 20 == 0){
+        if (intRow % 20 == 0){
           fill(255);
         }
         else{
@@ -109,15 +81,11 @@ public class Sketch extends PApplet {
 
         noStroke();
         rect(intX, intY, 5, 5);
-
       }
     }
   }
 
-  /**
-   * Use the modulus operator and an if/else statement to select the color.
-   * Don't use multiple 'if' statements.
-   */
+  // Section 3
   public void draw_section3(){
     int intX = 0;
     int intY = 0;
@@ -127,7 +95,7 @@ public class Sketch extends PApplet {
         intX = 603 + intRow;
         intY = 303 + intColumn;
 
-        if(intColumn % 20 == 0){
+        if (intColumn % 20 == 0){
           fill(0);
         }
         else{
@@ -136,14 +104,11 @@ public class Sketch extends PApplet {
 
         noStroke();
         rect(intX, intY, 5, 5);
-
     }
   }
 }
 
-  /**
-   * Use the modulus operator and just one 'if' statement to select the color.
-   */
+  // Section 4
   public void draw_section4(){
     int intX = 0;
     int intY = 0;
@@ -153,7 +118,7 @@ public class Sketch extends PApplet {
         intX = 903 + intRow;
         intY = 303 + intColumn;
 
-        if(intRow % 20 == 0 && (intColumn+10) % 20 == 0){
+        if (intRow % 20 == 0 && (intColumn+10) % 20 == 0){
           fill(255);
         }
         else{
@@ -162,14 +127,11 @@ public class Sketch extends PApplet {
 
         noStroke();
         rect(intX, intY, 5, 5);
-
     }
   }
 }
 
-  /**
-   * Do NOT use 'if' statements to complete 5-8. Manipulate the loops instead
-   */
+  // Section 5
   public void draw_section5(){
     int intX = 0;
     int intY = 0;
@@ -185,11 +147,11 @@ public class Sketch extends PApplet {
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
-
       }
     }
   }
 
+  // Section 6
   public void draw_section6(){
     int intX = 0;
     int intY = 0;
@@ -205,11 +167,11 @@ public class Sketch extends PApplet {
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
-
       }
     }
   }
 
+  // Section 7
   public void draw_section7(){
     int intX = 0;
     int intY = 0;
@@ -225,18 +187,27 @@ public class Sketch extends PApplet {
         fill(255);
         noStroke();
         rect(intX, intY, 5, 5);
-
       }
     }
   }
   
+  // Section 8
   public void draw_section8(){
-    
+    int intX = 0;
+    int intY = 0;
+    int intCounter = 0;
+
+    for(int intRow = 0; intRow < 300; intRow += 10){
+      intCounter += 10;
+
+      for(int intColumn = 0; intColumn < intCounter; intColumn += 10){
+        intX = 903 + intRow;
+        intY = 3 + intColumn;
+
+        fill(255);
+        noStroke();
+        rect(intX, intY, 5, 5);
+      }
+    }
   }
-
-
-
-
-
-
 }
