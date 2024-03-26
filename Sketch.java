@@ -24,7 +24,6 @@ public class Sketch extends PApplet {
     draw_section6();
     draw_section7();
     draw_section8();
-
   }
 
   public void draw_section_outlines(){
@@ -51,6 +50,7 @@ public class Sketch extends PApplet {
     int intY = 0;
 
     for(int intRow = 0; intRow < 300; intRow += 10){
+      
       for(int intColumn = 0; intColumn < 300; intColumn += 10){
         intX = 3 + intRow;
         intY = 303 + intColumn;
@@ -68,6 +68,7 @@ public class Sketch extends PApplet {
     int intY = 0;
 
     for(int intRow = 0; intRow < 300; intRow += 10){
+      
       for(int intColumn = 0; intColumn < 300; intColumn += 10){
         intX = 303 + intRow;
         intY = 303 + intColumn;
@@ -91,6 +92,7 @@ public class Sketch extends PApplet {
     int intY = 0;
 
     for(int intRow = 0; intRow < 300; intRow += 10){
+      
       for(int intColumn = 0; intColumn < 300; intColumn += 10){
         intX = 603 + intRow;
         intY = 303 + intColumn;
@@ -114,6 +116,7 @@ public class Sketch extends PApplet {
     int intY = 0;
 
     for(int intRow = 0; intRow < 300; intRow += 10){
+      
       for(int intColumn = 0; intColumn < 300; intColumn += 10){
         intX = 903 + intRow;
         intY = 303 + intColumn;
