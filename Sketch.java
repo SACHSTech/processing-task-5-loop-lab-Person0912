@@ -92,7 +92,26 @@ public class Sketch extends PApplet {
    * Don't loop from 30 to 60 to shift everything over, just add 300 to x.
    */
   public void draw_section2(){
+    int intX = 0;
+    int intY = 0;
 
+    for(int intRow = 0; intRow < 300; intRow += 10){
+      for(int intColumn = 0; intColumn < 300; intColumn += 10){
+        intX = 303 + intRow;
+        intY = 303 + intColumn;
+
+        if(intRow % 20 == 0){
+          fill(255);
+        }
+        else{
+          fill(0);
+        }
+
+        noStroke();
+        rect(intX, intY, 5, 5);
+
+      }
+    }
   }
 
   /**
